@@ -1,10 +1,18 @@
-void setup() {
-  // put your setup code here, to run once
+#include "SensorDistancia.h"
 
-  // Hola 
+
+SensorDistancia sensorAlcoba;
+
+
+void setup() {
+
+  sensorAlcoba = SensorDistancia (13,12,0.0,false);
+  Serial.begin(9600); 
+  
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
-}
+  sensorAlcoba.getValorSensado();  
+
+} 
